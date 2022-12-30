@@ -1,0 +1,20 @@
+@(post: Question)(implicit flash : Flash)
+@main("Post") {
+
+<div class="container-fluid bg-dark">
+    <div class="row justify-content-md-center">
+        <div class="card border" style="width: 50rem;" id=@post.id>
+            <div class="card-body">
+                <div class="card-text d-flex justify-content-end">
+                    @post.date
+                </div>
+                <h5 class="card-title">@post.title</h5>
+                <p class="card-text">@post.text</p>
+                <div class=" container bg-light">
+                    <pre><code >@post.code</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
